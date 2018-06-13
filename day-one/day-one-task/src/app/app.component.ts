@@ -9,4 +9,6 @@ export class AppComponent {
 	title: string = 'my application';
 	author: string = 'Carlos Andres Arias Londo#o';
 	count: number = 0;
+	imgSource: string = './../favicon.ico';
+	enabled: boolean = false;
 }

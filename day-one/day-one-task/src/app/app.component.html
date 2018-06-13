@@ -1,4 +1,8 @@
 <app-my-component></app-my-component>
-{{ count }}
-<br>
-<button (click)="count = count + 1">Click me!</button>
+<img [src]="imgSource">
+<p>
+  {{ count }}
+  <button (click)="count = count + 1">Click me!</button>
+</p>
+<input [disabled]="enabled" value="input xP">
+<button (click)="enabled = !enabled"> Toggle input state</button>

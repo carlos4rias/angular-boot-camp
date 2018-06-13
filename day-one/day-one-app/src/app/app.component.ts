@@ -1,4 +1,4 @@
-import { Person } from './person.module';
+import { Person } from './person.model';
 import { Component } from '@angular/core';
 
 @Component({

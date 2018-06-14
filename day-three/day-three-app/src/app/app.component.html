@@ -1,4 +1,18 @@
 <h1>Hola Mundo</h1>
+<!-- 
 <span>{{ value }}</span>
 <br>
 <app-button (add)="addToValue($event)">Hola</app-button>
+ -->
+<!-- 
+<div *ngIf="isAuthenticated; else login">
+  <h1>Informacion Clasificada</h1>
+</div>
+<ng-template #login>
+  <h1>LOGIN FORM</h1>
+</ng-template>
+ -->
+
+<div *ngFor="let post of posts">
+  {{ post.title }}
+</div>

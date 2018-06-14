@@ -1,4 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { map, pluck, filter } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 @Component({
 	selector: 'app-root',
@@ -12,7 +15,10 @@ export class AppComponent {
 	addToValue(event: number) {
 		this.value += event;
 	} */
+	/* 
 	isAuthenticated: boolean = false;
+	 */
+	/*
 	posts = [
 		{
 			userId: 1,
@@ -36,8 +42,22 @@ export class AppComponent {
 				'et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut'
 		}
 	];
-
+ */
+	/* 
 	showName(name: string) {
 		console.log(name);
+	}
+	 */
+
+	//using lazy pipe
+
+	url: string = 'https://jsonplaceholder.typicode.com/posts/1';
+	posts$: Observable<any>;
+	constructor(private http: HttpClient) {
+		this.posts$ = this.http.get(this.url).pipe(filter((post) => post['id'] % 2 !== 0), pluck('title'));
+	}
+
+	isEven(id: number): boolean {
+		return id % 2 === 0;
 	}
 }

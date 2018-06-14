@@ -14,8 +14,21 @@
  -->
 <!-- 
 <div *ngFor="let post of posts">
+  <div *ngIf="!isEven(post.id)">
+    {{ post.id }} {{ post.title }}
+  </div>
+</div>
+ -->
+<!--  
+{{ '2131.1241.2355.3452' | hideNumber }}
+<br> {{ 'carlos andres arias londo#o' | titlecase | shortName}}
+ -->
+<!--
+<pre>{{ posts$ | async | json }}</pre>
+-->
+<!-- 
+<div *ngFor="let post of posts$ | async">
   {{ post.title }}
 </div>
  -->
-{{ '2131.1241.2355.3452' | hideNumber }}
-<br> {{ 'carlos andres arias londo#o' | titlecase | shortName}}
+<pre>{{ posts$ | async | json }}</pre>

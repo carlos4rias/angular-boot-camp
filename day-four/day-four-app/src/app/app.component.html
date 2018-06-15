@@ -1,0 +1,5 @@
+<app-user></app-user>
+
+<div *ngFor="let post of posts | async">
+  {{ post. id }} {{ post.title | titlecase }}
+</div>

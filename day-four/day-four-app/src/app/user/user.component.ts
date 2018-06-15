@@ -10,9 +10,11 @@ import { Component, OnInit } from '@angular/core';
 export class UserComponent {
 	user: User;
 	idUser: string;
+	url: string = 'http://jsonplaceholder.typicode.com/users/';
+
 	constructor(private post: DataService) {}
 	getUser() {
-		this.post.getData(this.idUser).subscribe((data) => (this.user = data));
+		this.post.getData<User>(this.url + this.idUser).subscribe((data) => (this.user = data));
 		console.log(this.idUser);
 	}
 }

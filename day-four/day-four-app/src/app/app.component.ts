@@ -10,7 +10,9 @@ import { Post } from './post.interface';
 })
 export class AppComponent {
 	posts: Observable<Post[]>;
+	postsUrl: string = 'http://jsonplaceholder.typicode.com/posts/';
+
 	constructor(private post: DataService) {
-		this.posts = this.post.getData();
+		this.posts = this.post.getData<Post[]>(this.postsUrl);
 	}
 }

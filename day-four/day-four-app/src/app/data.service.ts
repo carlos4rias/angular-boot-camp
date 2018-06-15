@@ -6,13 +6,9 @@ import { Post } from './post.interface';
 
 @Injectable()
 export class DataService {
-	urlPosts: string = 'http://jsonplaceholder.typicode.com/posts/';
-	urlUsers: string = 'http://jsonplaceholder.typicode.com/users/';
-
 	constructor(private http: HttpClient) {}
 
-	getData(userId?: string): Observable<any> {
-		if (!userId) return this.http.get<Post[]>(this.urlPosts);
-		else return this.http.get<User>(this.urlUsers + userId);
+	getData<T>(url: string): Observable<T> {
+		return this.http.get<T>(url);
 	}
 }

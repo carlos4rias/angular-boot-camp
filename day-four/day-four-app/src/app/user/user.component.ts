@@ -1,5 +1,5 @@
 import { User } from './../user.interface';
-import { PostService } from './../posts.service';
+import { DataService } from '../data.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class UserComponent {
 	user: User;
 	idUser: string;
-	constructor(private post: PostService) {}
+	constructor(private post: DataService) {}
 	getUser() {
 		this.post.getData(this.idUser).subscribe((data) => (this.user = data));
 		console.log(this.idUser);

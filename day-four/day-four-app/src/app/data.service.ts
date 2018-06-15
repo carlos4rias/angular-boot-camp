@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 import { Post } from './post.interface';
 
 @Injectable()
-export class PostService {
+export class DataService {
 	urlPosts: string = 'http://jsonplaceholder.typicode.com/posts/';
 	urlUsers: string = 'http://jsonplaceholder.typicode.com/users/';
 

@@ -1,5 +1,5 @@
 import { Observable } from 'rxjs';
-import { PostService } from './posts.service';
+import { DataService } from './data.service';
 import { Component } from '@angular/core';
 import { Post } from './post.interface';
 
@@ -10,7 +10,7 @@ import { Post } from './post.interface';
 })
 export class AppComponent {
 	posts: Observable<Post[]>;
-	constructor(private post: PostService) {
+	constructor(private post: DataService) {
 		this.posts = this.post.getData();
 	}
 }

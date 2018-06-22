@@ -1,3 +1,17 @@
-<p>
-  login works!
-</p>
+<div *ngIf="!loginService.isLogged">
+  <h1>HR Management</h1>
+  <div>
+    <div *ngIf=" errorMessage ">{{errorMessage}}</div>
+    <label>Username (carlos):
+      <input #user />
+    </label>
+    <br>
+    <label>Password (123):
+      <input #password />
+    </label>
+    <br>
+    <button (click)="login(user.value, password.value); user.value='' ; password.value='' ">
+      Login
+    </button>
+  </div>
+</div>

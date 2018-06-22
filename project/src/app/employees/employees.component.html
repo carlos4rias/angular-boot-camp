@@ -22,3 +22,36 @@
     <td>{{employee.project}}</td>
   </tr>
 </table>
+
+<label>Name:
+  <input #name />
+</label>
+<br>
+<label>Company:
+  <input #company />
+</label>
+<br>
+
+<label>Age:
+  <input #age />
+</label>
+<br>
+
+<label>Birthday:
+  <input #birthday type="date" />
+</label>
+<br>
+
+<label>Favourite Color:
+  <input #favcolor />
+</label>
+<br>
+
+<label>Project:
+  <input #project />
+</label>
+<br>
+
+<button (click)="add(name.value, company.value, age.value, birthday.value, favcolor.value, project.value)">
+  add new employee
+</button>

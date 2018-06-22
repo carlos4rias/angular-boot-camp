@@ -1,4 +1,4 @@
-import { Project } from './Project';
+import { Project } from './project.interface';
 
 export class Employee {
 	constructor(

@@ -16,4 +16,8 @@ export class LoginService {
 		}
 		return false;
 	}
+
+	logout(): any {
+		this.isLogged = false;
+	}
 }
